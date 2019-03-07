@@ -12,6 +12,10 @@
 		34BC92DE22318ABC009C863F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34BC92DC22318ABC009C863F /* Main.storyboard */; };
 		34BC92E022318ABD009C863F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34BC92DF22318ABD009C863F /* Assets.xcassets */; };
 		34BC92E322318ABD009C863F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34BC92E122318ABD009C863F /* LaunchScreen.storyboard */; };
+		34BC92EC22319555009C863F /* WorldClock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34BC92EA22319555009C863F /* WorldClock.storyboard */; };
+		34BC92EE223195AC009C863F /* Alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34BC92ED223195AC009C863F /* Alarm.storyboard */; };
+		34BC92F12231978A009C863F /* Stopwatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34BC92EF2231978A009C863F /* Stopwatch.storyboard */; };
+		34BC92F3223197A6009C863F /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34BC92F2223197A6009C863F /* Timer.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		34BC92DF22318ABD009C863F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34BC92E222318ABD009C863F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34BC92E422318ABD009C863F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34BC92EB22319555009C863F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AppleAlarmApp/Base.lproj/WorldClock.storyboard; sourceTree = "<group>"; };
+		34BC92ED223195AC009C863F /* Alarm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Alarm.storyboard; sourceTree = "<group>"; };
+		34BC92F02231978A009C863F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AppleAlarmApp/Base.lproj/Stopwatch.storyboard; sourceTree = "<group>"; };
+		34BC92F2223197A6009C863F /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,34 @@
 		34BC92D722318ABC009C863F /* AppleAlarmApp */ = {
 			isa = PBXGroup;
 			children = (
-				34BC92D822318ABC009C863F /* AppDelegate.swift */,
+				34BC92F5223197D1009C863F /* Resources */,
 				34BC92DA22318ABC009C863F /* ViewController.swift */,
+				34BC92F4223197C4009C863F /* StoryBoards */,
+			);
+			path = AppleAlarmApp;
+			sourceTree = "<group>";
+		};
+		34BC92F4223197C4009C863F /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				34BC92F2223197A6009C863F /* Timer.storyboard */,
+				34BC92EF2231978A009C863F /* Stopwatch.storyboard */,
+				34BC92ED223195AC009C863F /* Alarm.storyboard */,
+				34BC92EA22319555009C863F /* WorldClock.storyboard */,
 				34BC92DC22318ABC009C863F /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		34BC92F5223197D1009C863F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				34BC92D822318ABC009C863F /* AppDelegate.swift */,
 				34BC92DF22318ABD009C863F /* Assets.xcassets */,
 				34BC92E122318ABD009C863F /* LaunchScreen.storyboard */,
 				34BC92E422318ABD009C863F /* Info.plist */,
 			);
-			path = AppleAlarmApp;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +150,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34BC92EC22319555009C863F /* WorldClock.storyboard in Resources */,
 				34BC92E322318ABD009C863F /* LaunchScreen.storyboard in Resources */,
 				34BC92E022318ABD009C863F /* Assets.xcassets in Resources */,
+				34BC92EE223195AC009C863F /* Alarm.storyboard in Resources */,
+				34BC92F12231978A009C863F /* Stopwatch.storyboard in Resources */,
+				34BC92F3223197A6009C863F /* Timer.storyboard in Resources */,
 				34BC92DE22318ABC009C863F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +189,22 @@
 				34BC92E222318ABD009C863F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		34BC92EA22319555009C863F /* WorldClock.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34BC92EB22319555009C863F /* Base */,
+			);
+			name = WorldClock.storyboard;
+			sourceTree = "<group>";
+		};
+		34BC92EF2231978A009C863F /* Stopwatch.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34BC92F02231978A009C863F /* Base */,
+			);
+			name = Stopwatch.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -284,7 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CC2FU4U4ZR;
-				INFOPLIST_FILE = AppleAlarmApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AppleAlarmApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CC2FU4U4ZR;
-				INFOPLIST_FILE = AppleAlarmApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AppleAlarmApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
