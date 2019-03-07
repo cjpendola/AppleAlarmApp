@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Timer-->
         <scene sceneID="7f4-mO-gc9">
             <objects>
-                <viewController id="jOk-Rj-xjM" sceneMemberID="viewController">
+                <viewController id="jOk-Rj-xjM" customClass="TimerViewController" customModule="AppleAlarmApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Wu-Q2-H3g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +27,9 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6L3-IC-kAo">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
                                 <items>
                                     <navigationItem title="Timer" id="3pS-De-rnB"/>
                                 </items>
@@ -34,37 +37,41 @@
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOM-2l-bW1">
                                 <rect key="frame" x="275" y="374" width="80" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNj-Pi-dmd">
-                                        <rect key="frame" x="21" y="30" width="38" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCd-Me-lLW">
+                                        <rect key="frame" x="2" y="2" width="76" height="76"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="aNj-Pi-dmd" firstAttribute="centerY" secondItem="hOM-2l-bW1" secondAttribute="centerY" id="29G-sl-Omz"/>
-                                    <constraint firstItem="aNj-Pi-dmd" firstAttribute="centerX" secondItem="hOM-2l-bW1" secondAttribute="centerX" id="MV7-cB-sb9"/>
+                                    <constraint firstAttribute="bottom" secondItem="CCd-Me-lLW" secondAttribute="bottom" constant="2" id="YSi-Nd-Ljs"/>
+                                    <constraint firstItem="CCd-Me-lLW" firstAttribute="top" secondItem="hOM-2l-bW1" secondAttribute="top" constant="2" id="f0Y-gQ-A7F"/>
+                                    <constraint firstAttribute="trailing" secondItem="CCd-Me-lLW" secondAttribute="trailing" constant="2" id="fcq-aN-4i6"/>
                                     <constraint firstAttribute="height" constant="80" id="iH5-KS-z7m"/>
                                     <constraint firstAttribute="width" constant="80" id="iad-lg-BrH"/>
+                                    <constraint firstItem="CCd-Me-lLW" firstAttribute="leading" secondItem="hOM-2l-bW1" secondAttribute="leading" constant="2" id="kst-Is-FLN"/>
                                 </constraints>
                             </view>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aAo-JG-Q1E">
                                 <rect key="frame" x="20" y="374" width="80" height="80"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRt-TD-fSZ">
-                                        <rect key="frame" x="13.5" y="30" width="53" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j10-Ed-yCB">
+                                        <rect key="frame" x="2" y="2" width="76" height="76"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="DRt-TD-fSZ" firstAttribute="centerY" secondItem="aAo-JG-Q1E" secondAttribute="centerY" id="2Wb-AM-zmn"/>
-                                    <constraint firstItem="DRt-TD-fSZ" firstAttribute="centerX" secondItem="aAo-JG-Q1E" secondAttribute="centerX" id="D54-kc-zMk"/>
+                                    <constraint firstAttribute="bottom" secondItem="j10-Ed-yCB" secondAttribute="bottom" constant="2" id="CcX-Tx-wUV"/>
+                                    <constraint firstItem="j10-Ed-yCB" firstAttribute="top" secondItem="aAo-JG-Q1E" secondAttribute="top" constant="2" id="UgV-Jg-MpT"/>
+                                    <constraint firstItem="j10-Ed-yCB" firstAttribute="leading" secondItem="aAo-JG-Q1E" secondAttribute="leading" constant="2" id="dUH-an-OvO"/>
                                     <constraint firstAttribute="height" constant="80" id="jSU-SU-k4P"/>
+                                    <constraint firstAttribute="trailing" secondItem="j10-Ed-yCB" secondAttribute="trailing" constant="2" id="m5f-3K-3qr"/>
                                     <constraint firstAttribute="width" constant="80" id="yog-Zo-qZX"/>
                                 </constraints>
                             </view>
@@ -74,19 +81,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4TM-i4-pZ2">
                                         <rect key="frame" x="15" y="5" width="345" height="34"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="When Timer Ends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Saj-ld-29c">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="When Timer Ends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Saj-ld-29c">
                                                 <rect key="frame" x="0.0" y="0.0" width="264.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(sound)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVU-Lc-jWo">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(sound)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVU-Lc-jWo">
                                                 <rect key="frame" x="269.5" y="0.0" width="59.5" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l04-LK-8bl">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l04-LK-8bl">
                                                 <rect key="frame" x="334" y="0.0" width="11" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -96,9 +103,12 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iA9-ma-TP0">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="iA9-ma-TP0" secondAttribute="bottom" id="7Nq-RF-7nB"/>
                                     <constraint firstAttribute="bottom" secondItem="4TM-i4-pZ2" secondAttribute="bottom" constant="5" id="BvD-lB-w9r"/>
@@ -112,7 +122,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="2pu-cr-SOg" firstAttribute="trailing" secondItem="hOM-2l-bW1" secondAttribute="trailing" constant="20" id="99o-oI-Qcv"/>
                             <constraint firstItem="wB4-K1-CkQ" firstAttribute="leading" secondItem="2pu-cr-SOg" secondAttribute="leading" id="IbY-sC-AkL"/>
@@ -130,7 +140,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2pu-cr-SOg"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="A7q-ZN-xcn"/>
+                    <tabBarItem key="tabBarItem" title="Timer" id="AUJ-sh-T2X"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="j10-Ed-yCB" id="nLN-Lv-yAn"/>
+                        <outlet property="cancelView" destination="aAo-JG-Q1E" id="P8H-yc-C75"/>
+                        <outlet property="pickerView" destination="wB4-K1-CkQ" id="ZUY-Sm-pQY"/>
+                        <outlet property="startButton" destination="CCd-Me-lLW" id="5yw-Jq-z2x"/>
+                        <outlet property="startView" destination="hOM-2l-bW1" id="mXD-0R-NKJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k58-N5-q1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
