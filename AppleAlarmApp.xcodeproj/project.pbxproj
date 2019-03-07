@@ -18,6 +18,8 @@
 		34BC92F3223197A6009C863F /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34BC92F2223197A6009C863F /* Timer.storyboard */; };
 		34BC92F722319D7F009C863F /* WorldClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BC92F622319D7F009C863F /* WorldClockViewController.swift */; };
 		34BC92F92231B7F3009C863F /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BC92F82231B7F3009C863F /* StopwatchViewController.swift */; };
+		628481452231BFA7002D23FA /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628481442231BFA7002D23FA /* TimerViewController.swift */; };
+		628481472231BFB6002D23FA /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628481462231BFB6002D23FA /* AlarmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		34BC92F2223197A6009C863F /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		34BC92F622319D7F009C863F /* WorldClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockViewController.swift; sourceTree = "<group>"; };
 		34BC92F82231B7F3009C863F /* StopwatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
+		628481442231BFA7002D23FA /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		628481462231BFB6002D23FA /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				34BC92DA22318ABC009C863F /* ViewController.swift */,
 				34BC92F82231B7F3009C863F /* StopwatchViewController.swift */,
 				34BC92F622319D7F009C863F /* WorldClockViewController.swift */,
+				628481442231BFA7002D23FA /* TimerViewController.swift */,
+				628481462231BFB6002D23FA /* AlarmViewController.swift */,
 				34BC92F4223197C4009C863F /* StoryBoards */,
 			);
 			path = AppleAlarmApp;
@@ -173,7 +179,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				628481452231BFA7002D23FA /* TimerViewController.swift in Sources */,
 				34BC92F92231B7F3009C863F /* StopwatchViewController.swift in Sources */,
+				628481472231BFB6002D23FA /* AlarmViewController.swift in Sources */,
 				34BC92F722319D7F009C863F /* WorldClockViewController.swift in Sources */,
 				34BC92DB22318ABC009C863F /* ViewController.swift in Sources */,
 				34BC92D922318ABC009C863F /* AppDelegate.swift in Sources */,
