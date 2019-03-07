@@ -17,6 +17,7 @@
 		34BC92F12231978A009C863F /* Stopwatch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34BC92EF2231978A009C863F /* Stopwatch.storyboard */; };
 		34BC92F3223197A6009C863F /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34BC92F2223197A6009C863F /* Timer.storyboard */; };
 		34BC92F722319D7F009C863F /* WorldClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BC92F622319D7F009C863F /* WorldClockViewController.swift */; };
+		34BC92F92231B7F3009C863F /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BC92F82231B7F3009C863F /* StopwatchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		34BC92F02231978A009C863F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = AppleAlarmApp/Base.lproj/Stopwatch.storyboard; sourceTree = "<group>"; };
 		34BC92F2223197A6009C863F /* Timer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timer.storyboard; sourceTree = "<group>"; };
 		34BC92F622319D7F009C863F /* WorldClockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldClockViewController.swift; sourceTree = "<group>"; };
+		34BC92F82231B7F3009C863F /* StopwatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				34BC92F5223197D1009C863F /* Resources */,
 				34BC92DA22318ABC009C863F /* ViewController.swift */,
+				34BC92F82231B7F3009C863F /* StopwatchViewController.swift */,
 				34BC92F622319D7F009C863F /* WorldClockViewController.swift */,
 				34BC92F4223197C4009C863F /* StoryBoards */,
 			);
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34BC92F92231B7F3009C863F /* StopwatchViewController.swift in Sources */,
 				34BC92F722319D7F009C863F /* WorldClockViewController.swift in Sources */,
 				34BC92DB22318ABC009C863F /* ViewController.swift in Sources */,
 				34BC92D922318ABC009C863F /* AppDelegate.swift in Sources */,
